@@ -5,18 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b387ba31-6bd9-4d27-8986-3ef2d5aa146a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/GroupBuyingEcommerce_SocialMedia_Prj.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/GroupBuyingEcommerce_SocialMedia_Prj.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/duangb/duangb/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/duangb/duangb/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/duangb/ungdunggb/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/duangb/ungdunggb/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gbe_sm_prj/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gbe_sm_prj/.idea/gbe_sm_prj.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gbe_sm_prj/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gbe_sm_prj/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gbe_sm_prj/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gbe_sm_prj/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/duangb/ungdunggb/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/duangb/ungdunggb/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/duangb/ungdunggb/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/duangb/ungdunggb/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,21 +18,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2mTlBvyRPond8Ny4PrWlHOZu0Ae" />
   <component name="ProjectViewState">
     <option name="autoscrollToSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
