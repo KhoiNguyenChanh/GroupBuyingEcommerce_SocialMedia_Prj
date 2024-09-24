@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/5.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
 """
-
+import os
 from pathlib import Path
 
 from django.conf.global_settings import MEDIA_ROOT
@@ -43,10 +43,21 @@ INSTALLED_APPS = [
     'ckeditor',
     'ckeditor_uploader',
     'debug_toolbar',
-
+    'rest_framework',
+    'drf_yasg',
+    'cloudinary',
+    'oauth2_provider',
 ]
 
 CKEDITOR_UPLOAD_PATH = "ckeditor/images/"
+
+import cloudinary
+
+cloudinary.config(
+    cloud_name="dbqaequqv",
+    api_key="741317942552615",
+    api_secret="L05czfd2tdEhRvbUy29A1vF8BZ4"
+)
 
 MIDDLEWARE = [
     'debug_toolbar.middleware.DebugToolbarMiddleware',
@@ -66,6 +77,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [],
+        # 'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

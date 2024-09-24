@@ -10,12 +10,21 @@
       <change beforePath="$PROJECT_DIR$/duangb/duangb/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/duangb/duangb/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/duangb/ungdunggb/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/duangb/ungdunggb/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/duangb/ungdunggb/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/duangb/ungdunggb/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/duangb/ungdunggb/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/duangb/ungdunggb/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/duangb/ungdunggb/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/duangb/ungdunggb/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -31,6 +40,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;
   }
