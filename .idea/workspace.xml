@@ -7,8 +7,10 @@
     <list default="true" id="b387ba31-6bd9-4d27-8986-3ef2d5aa146a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/duangb/duangb/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/duangb/duangb/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/duangb/duangb/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/duangb/duangb/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/duangb/ungdunggb/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/duangb/ungdunggb/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/duangb/ungdunggb/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/duangb/ungdunggb/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,5 +52,16 @@
       <updated>1727108314821</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

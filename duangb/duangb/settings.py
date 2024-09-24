@@ -40,9 +40,16 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'ungdunggb.apps.UngdunggbConfig',
+    'ckeditor',
+    'ckeditor_uploader',
+    'debug_toolbar',
+
 ]
 
+CKEDITOR_UPLOAD_PATH = "ckeditor/images/"
+
 MIDDLEWARE = [
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -89,6 +96,10 @@ DATABASES = {
 }
 
 MEDIA_ROOT = '%s/ungdunggb/static/' % BASE_DIR
+
+INTERNAL_IPS = [
+    "127.0.0.1",
+]
 
 AUTH_USER_MODEL = 'ungdunggb.User'
 # Password validation

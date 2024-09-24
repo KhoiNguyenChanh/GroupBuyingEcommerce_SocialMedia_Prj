@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
-# Create your models here.
+from ckeditor.fields import RichTextField
 
 class User(AbstractUser):
     pass
@@ -15,7 +15,7 @@ class BaseModel(models.Model):
 
 class Category(BaseModel):
     name = models.CharField(max_length=50, null=False)
-    description = models.TextField()
+    description = RichTextField()
     class Meta:
         verbose_name_plural = "Categories"
 
@@ -25,7 +25,7 @@ class Category(BaseModel):
 class Product(BaseModel):
     name = models.CharField(max_length=100, null=False)
     price = models.FloatField(max_length=50)
-    description = models.TextField()
+    description = RichTextField()
     #1. o day tao duong dan 2.sang setting gan media root duong dan vao
     image = models.ImageField(upload_to='ungdunggb/%Y/%m')
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
