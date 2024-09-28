@@ -49,6 +49,18 @@ INSTALLED_APPS = [
     'oauth2_provider',
 ]
 
+# client ID: JP8d7Gi7bXqTskuexdkpLTxWLRbkR6tLFy89obmC
+# client secret: cx8h6ItGxDOkYzrnVjvO2IyOw9VX0CXhxkx2RVCDy6YhX0wOeO6azr5EKhGeEaO9iwNU6FMEqdjcOUM9FZNSBbUeHQQEkJw8AyHOja0UAvkUFmp3re2mXiOzXy3qUgUn
+
+# bien cau hinh api, dung lam chung thuc
+# dung oauth2 chung thuc nen phai migrate de update table
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'oauth2_provider.contrib.rest_framework.OAuth2Authentication',
+    )
+}
+
+
 CKEDITOR_UPLOAD_PATH = "ckeditor/images/"
 
 import cloudinary
@@ -154,3 +166,15 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# app name :GroupBuyingEcommerceApp
+CLIENT_ID = 'JP8d7Gi7bXqTskuexdkpLTxWLRbkR6tLFy89obmC'
+CLIENT_SECRET = 'cx8h6ItGxDOkYzrnVjvO2IyOw9VX0CXhxkx2RVCDy6YhX0wOeO6azr5EKhGeEaO9iwNU6FMEqdjcOUM9FZNSBbUeHQQEkJw8AyHOja0UAvkUFmp3re2mXiOzXy3qUgUn'
+
+# GRANT_TYPE UN_FING_SUPPORTED!!!!
+# OAUTH2_PROVIDER = {
+#     'OAUTH2_BACKEND_CLASS': 'oauth2_provider.oauth2_backends.JSONOAuthLibCore'
+# }
+
+# id2: AfAgCqjiK3vHE5JPKNCYAf4pW7Xj1TN576vmcI2I
+# secret2:Hf0vX606jNuqDWGNxeYvc8Da1aGsteGLTnXJbf0EEtLqYgivWhAiDdi417ksLGYT1MnbOCyMzsF57oxOJLP0n44fflUW4fqVmKFeop2a0t9Gan3MloEcewpsPHmv04I3

@@ -1,4 +1,4 @@
-from .models import Category, Product, Tag, User
+from .models import Category, Product, Tag, User, Comment
 from rest_framework import serializers
 
 class CategorySerializer(serializers.ModelSerializer):
@@ -26,11 +26,24 @@ class ProductSerializer(BaseSerializer):
 
     class Meta:
         model = Product
-        fields = '__all__'
+        fields = ['id', 'name', 'price', 'description', 'image', 'tags', 'created_date', 'updated_date', 'category']
 
 
+# tach rieng ra de de quan ly api :1
+class ProductDetailSerializer(ProductSerializer):
+    liked = serializers.SerializerMethodField()
 
-class UserSerialzier(serializers.ModelSerializer):
+    def get_liked(self, product):
+        request = self.context.get('request')
+        if request.user.is_authenticated:
+            return product.like_set.filter(active=True).exists() #truy van nguoc
+
+
+    class Meta:
+        model = ProductSerializer.Meta.model
+        fields = ProductSerializer.Meta.fields + ['liked']
+
+class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = ['first_name', 'last_name', 'username', 'password', 'email', 'avatar']
@@ -50,3 +63,12 @@ class UserSerialzier(serializers.ModelSerializer):
 
         return user
 #tao cac loai user rieng biet nhu seller, customer
+
+
+class CommentSerializer(serializers.ModelSerializer):
+    user = UserSerializer()
+
+    class Meta:
+        model = Comment #model de lay du lieu
+        fields = ['id', 'content', 'user'] #cac field show ra tu du lieu duoi csdl
+    # 'user' la ( user = UserSerial() )

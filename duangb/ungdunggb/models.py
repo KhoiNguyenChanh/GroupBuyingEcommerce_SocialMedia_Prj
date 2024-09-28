@@ -45,3 +45,26 @@ class Tag(BaseModel):
 
     def __str__(self):
         return self.name
+
+class Interaction(BaseModel):
+    user = models.ForeignKey(User, on_delete=models.CASCADE, null=False)
+    # comment, review tren spham nao
+    product = models.ForeignKey(Product, on_delete=models.CASCADE, null=False)
+
+    class Meta:
+        abstract = True
+
+
+class Comment(Interaction):
+    content = models.CharField(max_length=255, null=False)
+
+#like comment san pham ? chi like 1 lan (nhu facebook, nho unique together)
+class Like(Interaction):
+    active = models.BooleanField(default=True)
+
+    class Meta:
+        unique_together = ('user', 'product')
+
+#rating 0-5
+class Rating(Interaction):
+    rate = models.SmallIntegerField(default=0)

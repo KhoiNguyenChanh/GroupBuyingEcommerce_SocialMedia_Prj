@@ -8,9 +8,9 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/duangb/duangb/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/duangb/duangb/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/duangb/duangb/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/duangb/duangb/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/duangb/ungdunggb/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/duangb/ungdunggb/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/duangb/ungdunggb/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/duangb/ungdunggb/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/duangb/ungdunggb/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/duangb/ungdunggb/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/duangb/ungdunggb/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/duangb/ungdunggb/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/duangb/ungdunggb/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/duangb/ungdunggb/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/duangb/ungdunggb/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/duangb/ungdunggb/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
