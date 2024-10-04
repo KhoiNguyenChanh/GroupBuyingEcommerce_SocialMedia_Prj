@@ -27,7 +27,15 @@ SECRET_KEY = 'django-insecure-3i^cf4qw34+otq^e1-p*w2&!57qtnu_g8gfpdp*a%ass6m72zj
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '192.168.1.8',
+    '127.0.0.1',
+    # "http://localhost:3000",
+    # "http://192.168.1.8:3000",
+    # "http://192.168.1.8:8000",
+    # "http://127.0.0.1:3000",
+    # "http://127.0.0.1:8000",
+]
 
 
 # Application definition
@@ -47,6 +55,8 @@ INSTALLED_APPS = [
     'drf_yasg',
     'cloudinary',
     'oauth2_provider',
+    'corsheaders',
+    # 'django_extensions',
 ]
 
 # client ID: JP8d7Gi7bXqTskuexdkpLTxWLRbkR6tLFy89obmC
@@ -75,12 +85,29 @@ MIDDLEWARE = [
     'debug_toolbar.middleware.DebugToolbarMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+
 ]
+CORS_ALLOWED_ALL_ORIGINS = True
+# older version
+CORS_ORIGIN_ALLOW_ALL = True
+
+# CORS_ALLOWED_ORIGINS =
+# [
+#     "http://localhost:3000",
+#     "http://192.168.1.8:3000",
+#     "http://192.168.1.8:8000",
+#     "http://127.0.0.1:3000",
+#     "http://127.0.0.1:8000",
+#
+# ]
+
 
 
 ROOT_URLCONF = 'duangb.urls'

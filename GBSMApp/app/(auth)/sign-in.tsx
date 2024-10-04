@@ -68,7 +68,7 @@ const SignInScreen = () => {
   const [confirmPassword, setConfirmPassword] = useState("");
 
   const handleLogin = () => {
-    route.push("/(root)/(tabs)/main")
+    route.push("/(root)/(drawers)/(tabs)/main")
     // Xử lý đăng ký ở đây
     console.log("Email:", email);
     console.log("Password:", password);

@@ -3,8 +3,8 @@ import {
   StyleSheet,
 } from "react-native";
 
-const Home = () => {
-   return <Redirect href="/(drawers)/(tabs)/main" />;
+const ProxyLogin = () => {
+   return <Redirect href="/(auth)/welcome" />;
 
 };
 const styles = StyleSheet.create({
@@ -14,4 +14,4 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
 });
-export default Home;
+export default ProxyLogin;

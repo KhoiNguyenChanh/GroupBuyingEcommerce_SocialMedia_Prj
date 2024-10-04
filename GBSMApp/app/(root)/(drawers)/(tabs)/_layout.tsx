@@ -13,11 +13,13 @@ import { useColorScheme } from '@/hooks/useColorScheme';
       screenOptions={{
         tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
         headerShown: false,
-      }}>
+      }}
+      >
       <Tabs.Screen
+        
         name="main"
         options={{
-          title: 'Home',
+          title: 'Màn hình chính',
           tabBarIcon: ({ color, focused }) => (
             <TabBarIcon name={focused ? 'home' : 'home-outline'} color={color} />
           ),
@@ -27,9 +29,9 @@ import { useColorScheme } from '@/hooks/useColorScheme';
       <Tabs.Screen
         name="social"
         options={{
-          title: 'Social Media',
+          title: 'Mạng xã hội',
           tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'code-slash' : 'code-slash-outline'} color={color} />
+            <TabBarIcon name={focused ? 'cloud' : 'cloud-outline'} color={color} />
           ),
         }}
       />
