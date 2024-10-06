@@ -1,11 +1,6 @@
 import { useNavigation } from "@react-navigation/native";
 import { useRouter } from "expo-router";
-import {
-  Image,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-} from "react-native";
+import { Image, StyleSheet, Text, TouchableOpacity } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 const WelcomeScreen = () => {
   const route = useRouter();
@@ -13,7 +8,9 @@ const WelcomeScreen = () => {
   return (
     <SafeAreaView style={styles.container}>
       <Image
-        source={{ uri: "https://res.cloudinary.com/dbqaequqv/image/upload/t_Banner 16:9/v1727689598/welcome_p8yfr9.jpg" }}
+        source={{
+          uri: "https://res.cloudinary.com/dbqaequqv/image/upload/t_Banner 16:9/v1727689598/welcome_p8yfr9.jpg",
+        }}
         style={styles.image}
         resizeMode="contain"
       />
@@ -30,9 +27,19 @@ const WelcomeScreen = () => {
 
       <TouchableOpacity
         onPress={() => route.push("/(auth)/sign-up")}
-        style={[styles.button, {backgroundColor:'#d37e00', width:'50%'}]}
+        style={[styles.button, { backgroundColor: "#d37e00", width: "50%" }]}
       >
-        <Text style={[styles.buttonText, ]}>Đăng ký</Text>
+        <Text style={[styles.buttonText]}>Đăng ký</Text>
+      </TouchableOpacity>
+      <TouchableOpacity
+        onPress={() => {
+          route.push("/(drawers)/(tabs)/main");
+        }}
+        style={{ backgroundColor: "whitesmoke", borderRadius: 10 }}
+      >
+        <Text style={{ padding: 10 }}>
+          For Development - Back to main screen
+        </Text>
       </TouchableOpacity>
     </SafeAreaView>
   );

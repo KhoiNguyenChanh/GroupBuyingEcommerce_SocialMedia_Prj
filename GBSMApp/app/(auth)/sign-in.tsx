@@ -1,52 +1,3 @@
-// import { Image, StyleSheet, Platform, View, Text, TouchableOpacity, } from 'react-native';
-// import { SafeAreaView } from 'react-native-safe-area-context';
-// import { useRouter } from 'expo-router';
-// const SignInScreen = () => {
-//     const router = useRouter();
-//   return (
-//     <SafeAreaView>
-//         <Text style={styles.title}>Đăng nhập</Text>
-//       {/* Thêm các trường nhập liệu cho đăng nhập tại đây */}
-
-//       <TouchableOpacity
-//         style={styles.button}
-//         onPress={() => router.back()} // Quay lại màn hình trước
-//       >
-//         <Text style={styles.buttonText}>Quay lại</Text>
-//       </TouchableOpacity>
-//     </SafeAreaView>
-
-//   );
-// }
-// export default SignInScreen;
-
-// const styles = StyleSheet.create({
-//     container: {
-//       flex: 1,
-//       padding: 20,
-//       backgroundColor: '#fff',
-//       justifyContent: 'center',
-//       alignItems: 'center',
-//     },
-//     title: {
-//       fontSize: 28,
-//       fontWeight: '600',
-//       marginBottom: 20,
-//     },
-//     button: {
-//       backgroundColor: '#2196F3',
-//       paddingVertical: 12,
-//       paddingHorizontal: 40,
-//       borderRadius: 8,
-//       marginTop: 30,
-//     },
-//     buttonText: {
-//       color: '#fff',
-//       fontSize: 18,
-//       fontWeight: '500',
-//     },
-//   });
-
 import {
   Image,
   StyleSheet,
@@ -60,20 +11,43 @@ import {
 import Ionicons from "react-native-vector-icons/Ionicons";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useRouter } from "expo-router";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import MyContext from "@/lib/MyContext";
+import API, { endpoints } from "@/lib/API";
 const SignInScreen = () => {
   const route = useRouter();
-
-  const [email, setEmail] = useState("");
+  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+  const [email, setEmail] = useState("");
 
-  const handleLogin = () => {
-    route.push("/(root)/(drawers)/(tabs)/main");
-    // Xử lý đăng ký ở đây
-    console.log("Email:", email);
-    console.log("Password:", password);
-    console.log("Confirm Password:", confirmPassword);
+  const [user, dispatch] = useContext(MyContext);
+
+  const handleLogin = async () => {
+    try {
+      let res = await API.post(endpoints["login"], {
+        username: username,
+        password: password,
+        client_id: "dN3jdsVEpkjTbjflWeSOG1TYH3lmOSuMVtO8bL4p",
+        client_secret:
+          "spg0l6MsBdHWGFYgKBwcVCi3NaAJE1h9XEgeMdZp3FR9nZmMzLl2clFGKB6O4OKF2tJUfaWLoTrKJeRWsF7g8LP4RL2ePgQG0SZFqZJkA24NdPbCEPR15dJIlzeziwjf",
+        grant_type: "password",
+      });
+      console.info(res.data);
+    } catch (ex) {
+      console.log(ex);
+    }
+
+    // if (username === 'admin' && password === '123'){
+    //   dispatch({
+    //     "type": "login",
+    //     "payload": {
+    //       "username": "admin"
+    //     }
+    //   });
+    //   route.push("/(drawers)/(tabs)/main");
+
+    // }
   };
   const handleNavigateSignup = () => {
     route.push("/(auth)/sign-up");
@@ -96,12 +70,20 @@ const SignInScreen = () => {
             Hãy nhập các thông tin yêu cầu{" "}
           </Text>
 
-          <TextInput
+          {/* <TextInput
             style={styles.input}
             placeholder="Email"
             value={email}
-            onChangeText={setEmail}
+            onChangeText={ (t) => setEmail(t)}
             keyboardType="email-address"
+            autoCapitalize="none"
+          /> */}
+          <TextInput
+            style={styles.input}
+            placeholder="Username"
+            value={username}
+            onChangeText={(t) => setUsername(t)}
+            // keyboardType="email-address"
             autoCapitalize="none"
           />
           <TextInput
@@ -118,24 +100,26 @@ const SignInScreen = () => {
             onChangeText={setConfirmPassword}
             secureTextEntry
           />
+
           <TouchableOpacity onPress={handleLogin} style={styles.button}>
             <Text style={styles.buttonText}>Đăng nhập</Text>
           </TouchableOpacity>
         </View>
+
         <View style={{ justifyContent: "center", alignItems: "center" }}>
           {/* lam sao de co dong gach ngang qua chu hoac? */}
-          <Text style={{marginBottom:10,}}>Hoặc</Text>
+          <Text style={{ marginBottom: 10 }}>Hoặc</Text>
 
           <View style={{ flexDirection: "row" }}>
             <TouchableOpacity
               onPress={() => handleNavigateSignup()}
-              style={{ 
+              style={{
                 backgroundColor: "#fff7e6",
                 borderRadius: 10,
-                flexDirection: 'row',
-                alignItems: 'center', // Căn giữa icon và text
+                flexDirection: "row",
+                alignItems: "center", // Căn giữa icon và text
                 padding: 10,
-               }}
+              }}
             >
               <Ionicons name="logo-google" size={20} color="#ff9b07" />
               <Text
@@ -143,7 +127,7 @@ const SignInScreen = () => {
                   color: "#ff9b07",
                   lineHeight: 20,
                   fontSize: 14,
-                  marginLeft:20,
+                  marginLeft: 20,
                 }}
               >
                 Đăng nhập bằng Google

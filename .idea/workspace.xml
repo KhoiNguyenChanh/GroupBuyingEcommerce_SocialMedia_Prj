@@ -6,22 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="b387ba31-6bd9-4d27-8986-3ef2d5aa146a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GBSMApp/app/(auth)/_layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/GBSMApp/app/(auth)/_layout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GBSMApp/app/(auth)/sign-in.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/GBSMApp/app/(auth)/sign-in.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GBSMApp/app/(auth)/sign-up.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/GBSMApp/app/(auth)/sign-up.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GBSMApp/app/(auth)/welcome.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/GBSMApp/app/(auth)/welcome.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GBSMApp/app/(root)/(drawers)/(tabs)/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/GBSMApp/app/(root)/(drawers)/(tabs)/main.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GBSMApp/app/(root)/(drawers)/_layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/GBSMApp/app/(root)/(drawers)/_layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GBSMApp/app/(root)/(drawers)/cart.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/GBSMApp/app/(root)/(drawers)/cart.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GBSMApp/app/(root)/(drawers)/order.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/GBSMApp/app/(root)/(drawers)/order.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GBSMApp/app/(root)/(drawers)/user.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/GBSMApp/app/(root)/(drawers)/user.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GBSMApp/app/(root)/_layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/GBSMApp/app/(root)/_layout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GBSMApp/app/_layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/GBSMApp/app/_layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GBSMApp/app/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/GBSMApp/app/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GBSMApp/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/GBSMApp/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GBSMApp/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/GBSMApp/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/duangb/duangb/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/duangb/duangb/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/duangb/ungdunggb/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/duangb/ungdunggb/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/duangb/ungdunggb/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/duangb/ungdunggb/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/duangb/ungdunggb/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/duangb/ungdunggb/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
