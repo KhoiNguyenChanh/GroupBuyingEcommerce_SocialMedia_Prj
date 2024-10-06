@@ -4,7 +4,10 @@ import {
 } from "react-native";
 
 const Home = () => {
+  // for dev
    return <Redirect href="/(drawers)/(tabs)/main" />;
+  // for production
+   //  return <Redirect href="/(auth)/welcome" />;
 
 };
 const styles = StyleSheet.create({

@@ -6,32 +6,22 @@
   <component name="ChangeListManager">
     <list default="true" id="b387ba31-6bd9-4d27-8986-3ef2d5aa146a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GBSMApp/app/(auth)/_layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/GBSMApp/app/(auth)/_layout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GBSMApp/app/(auth)/sign-in.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/GBSMApp/app/(auth)/sign-in.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GBSMApp/app/(root)/(drawer)/_layout.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GBSMApp/app/(root)/(drawer)/cart.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GBSMApp/app/(root)/(drawer)/chat.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GBSMApp/app/(root)/(drawer)/funny.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GBSMApp/app/(root)/(drawer)/order.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GBSMApp/app/(root)/(drawer)/post.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GBSMApp/app/(root)/(drawer)/search.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GBSMApp/app/(root)/(drawer)/user.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GBSMApp/app/(root)/(tabs)/_layout.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GBSMApp/app/(root)/(tabs)/main.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GBSMApp/app/(root)/(tabs)/social.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GBSMApp/app/(root)/_layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/GBSMApp/app/(root)/_layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GBSMApp/app/(auth)/sign-up.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/GBSMApp/app/(auth)/sign-up.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GBSMApp/app/(auth)/welcome.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/GBSMApp/app/(auth)/welcome.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GBSMApp/app/(root)/(drawers)/(tabs)/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/GBSMApp/app/(root)/(drawers)/(tabs)/main.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GBSMApp/app/(root)/(drawers)/_layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/GBSMApp/app/(root)/(drawers)/_layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GBSMApp/app/(root)/(drawers)/cart.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/GBSMApp/app/(root)/(drawers)/cart.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GBSMApp/app/(root)/(drawers)/order.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/GBSMApp/app/(root)/(drawers)/order.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GBSMApp/app/(root)/(drawers)/user.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/GBSMApp/app/(root)/(drawers)/user.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GBSMApp/app/_layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/GBSMApp/app/_layout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GBSMApp/app/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/GBSMApp/app/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GBSMApp/babel.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/GBSMApp/babel.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GBSMApp/configs/API.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GBSMApp/constants/Colors.ts" beforeDir="false" afterPath="$PROJECT_DIR$/GBSMApp/constants/Colors.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GBSMApp/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/GBSMApp/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GBSMApp/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/GBSMApp/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/duangb/duangb/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/duangb/duangb/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/duangb/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/duangb/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/duangb/ungdunggb/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/duangb/ungdunggb/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/duangb/ungdunggb/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/duangb/ungdunggb/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/duangb/ungdunggb/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/duangb/ungdunggb/serializers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/duangb/ungdunggb/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/duangb/ungdunggb/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/duangb/ungdunggb/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/duangb/ungdunggb/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,16 +48,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "Python.serializers.executor": "Debug",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "D:/4/for giao dien/django-ecommerce-project-amazon-clone",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Python.serializers.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/4/for giao dien/django-ecommerce-project-amazon-clone&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>

@@ -17,6 +17,7 @@ const WelcomeScreen = () => {
         style={styles.image}
         resizeMode="contain"
       />
+      {/* tạo trường hợp lưu tai khoan dang nhap r, text chào mừng là chào bạn {user.username?} */}
       <Text style={styles.welcomeText}>Chào mừng bạn !</Text>
       <Text>Bạn đã có tài khoản rồi?</Text>
       <TouchableOpacity

@@ -9,6 +9,8 @@ import {
   TextInput,
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
+import Ionicons from "react-native-vector-icons/Ionicons";
+
 import { useRouter } from "expo-router";
 import { useState } from "react";
 const SignUpScreen = () => {
@@ -88,7 +90,7 @@ const SignUpScreen = () => {
             onChangeText={setConfirmPassword}
             secureTextEntry
           />
-          <Text>Nhập ảnh, dùng button để lưu ảnh somehow :1 </Text>
+          {/* <Text>Nhập ảnh, dùng button để lưu ảnh somehow :1 </Text> */}
           <TouchableOpacity onPress={handleRegister} style={styles.button}>
             <Text style={styles.buttonText}>Đăng ký</Text>
           </TouchableOpacity>
@@ -96,52 +98,69 @@ const SignUpScreen = () => {
         {/* dang ky bang Google */}
         <View style={{ justifyContent: "center", alignItems: "center" }}>
           {/* lam sao de co dong gach ngang qua chu hoac? */}
-          <Text>Hoặc</Text>
-          <TouchableOpacity
-            onPress={() => handleNavigateLogin()}
-            style={{ backgroundColor: "#fff", borderWidth: 1 }}
-          >
-            <Text
+          <Text style={{ marginBottom: 10 }}>Hoặc</Text>
+
+          <View style={{ flexDirection: "row" }}>
+            <TouchableOpacity
+              // onPress={() => handleSignup()}
               style={{
-                color: "#ff9b07",
-                lineHeight: 20,
-                fontSize: 14,
-                paddingTop: 10,
+                backgroundColor: "#fff7e6",
+                borderRadius: 10,
+                flexDirection: "row",
+                alignItems: "center", // Căn giữa icon và text
+                padding: 10,
               }}
             >
-              Đăng ký bằng Google
-            </Text>
-          </TouchableOpacity>
-        </View>
-        <View
-          style={{
-            flexDirection: "row",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          <Text style={{ lineHeight: 20, fontSize: 14, margin: 12 }}>
-            Đã có tài khoản?
-          </Text>
-          <TouchableOpacity onPress={() => handleNavigateLogin()}>
-            <Text
-              style={[
-                styles.underline,
-                {
+              <Ionicons name="logo-google" size={20} color="#ff9b07" />
+              <Text
+                style={{
                   color: "#ff9b07",
                   lineHeight: 20,
                   fontSize: 14,
-                },
-              ]}
-            >
-              Đăng nhập
+                  marginLeft: 20,
+                }}
+              >
+                Đăng ký bằng Google
+              </Text>
+            </TouchableOpacity>
+          </View>
+          <View
+            style={{
+              flexDirection: "row",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <Text style={{ lineHeight: 20, fontSize: 14, margin: 12 }}>
+              Đã có tài khoản?
             </Text>
-          </TouchableOpacity>
+            <TouchableOpacity onPress={() => handleNavigateLogin()}>
+              <Text
+                style={[
+                  styles.underline,
+                  {
+                    color: "#ff9b07",
+                    lineHeight: 20,
+                    fontSize: 14,
+                  },
+                ]}
+              >
+                Đăng nhập
+              </Text>
+            </TouchableOpacity>
+          </View>
         </View>
 
-        <TouchableOpacity style={styles.button} onPress={() => route.back()}>
-          <Text style={styles.buttonText}>Quay lại</Text>
-        </TouchableOpacity>
+        <View
+          style={{ justifyContent: "center", alignItems: "center", bottom: 20 }}
+        >
+          <TouchableOpacity
+            style={[styles.button]}
+            onPress={() => route.back()}
+          >
+            <Text style={styles.buttonText}>Quay lại</Text>
+          </TouchableOpacity>
+        </View>
       </View>
     </ScrollView>
   );
@@ -180,7 +199,7 @@ const styles = StyleSheet.create({
     position: "absolute",
   },
   button: {
-    width: "50%",
+    width: "70%",
     backgroundColor: "#ffa500",
     paddingVertical: 12,
     paddingHorizontal: 40,

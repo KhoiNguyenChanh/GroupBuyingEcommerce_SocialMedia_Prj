@@ -1,31 +1,36 @@
-import { Image, StyleSheet, Platform, View, Text } from 'react-native';
+import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
+import { useLocalSearchParams, useRouter } from 'expo-router';
 
 const UserScreen= () => {
+ const { id } = useLocalSearchParams();
+  const route = useRouter();
   return (
-    <View>
-        <Text>
-            UserScrean
-        </Text>
+    <View style={styles.container}>
+      <Text style={styles.title}>Hồ Sơ Người Dùng</Text>
+      <Text style={styles.content}>ID Người Dùng: {id}</Text>
+      <TouchableOpacity
+      onPress={ () => route.push("/otherscreens\\userinfoedit")}>
+        <Text>Chỉnh sửa thông tin người dùng</Text>
+      </TouchableOpacity>
     </View>
   );
 }
 
 export default UserScreen;
 const styles = StyleSheet.create({
-  titleContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 8,
+  container: {
+    flex: 1,
+    padding: 16,
+    justifyContent: 'center',
   },
-  stepContainer: {
-    gap: 8,
-    marginBottom: 8,
+  title: {
+    fontSize: 22,
+    marginBottom: 12,
+    textAlign: 'center',
   },
-  reactLogo: {
-    height: 178,
-    width: 290,
-    bottom: 0,
-    left: 0,
-    position: 'absolute',
+  content: {
+    fontSize: 16,
+    textAlign: 'center',
   },
 });
+

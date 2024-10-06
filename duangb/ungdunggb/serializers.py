@@ -83,10 +83,10 @@ class ProductReviewSerializer(serializers.ModelSerializer):
         model = ProductReview
         fields = ['id', 'review_image', 'rating', 'content', 'product', 'user', 'created_date', 'updated_date', 'active']
 
-    def validate_rating(self, value):
-        if not (0 <= value <= 5):
-            raise serializers.ValidationError("Rating phải nằm trong khoảng từ 0 đến 5.")
-        return value
+    # def validate_rating(self, value):
+    #     if not (0 <= value <= 5):
+    #         raise serializers.ValidationError("Rating phải nằm trong khoảng từ 0 đến 5.")
+    #     return value
 
 # QUAN LY TRA LOI COMMENT REVIEW
 class ProductReviewAnswerSerializer(serializers.ModelSerializer):
@@ -99,19 +99,19 @@ class ProductReviewAnswerSerializer(serializers.ModelSerializer):
 
 # QUAN LY VOTE BAO NHIEU SAO CHO COMMENT REVIEW
 class ProductReviewVotingSerializer(serializers.ModelSerializer):
-    product_review = serializers.PrimaryKeyRelatedField(queryset=ProductReview.objects.all())
-    user_voting = CustomerSerializer(read_only=True)
+    # product_review = serializers.PrimaryKeyRelatedField(queryset=ProductReview.objects.all())
+    # user_voting = CustomerSerializer(read_only=True)
 
     class Meta:
         model = ProductReviewVoting
         fields = ['id', 'product_review', 'user_voting', 'created_date', 'updated_date', 'active']
-        validators = [
-            serializers.UniqueTogetherValidator(
-                queryset=ProductReviewVoting.objects.all(),
-                fields=['product_review', 'user_voting'],
-                message="Bạn đã bình chọn cho đánh giá này."
-            )
-        ]
+        # validators = [
+        #     serializers.UniqueTogetherValidator(
+        #         queryset=ProductReviewVoting.objects.all(),
+        #         fields=['product_review', 'user_voting'],
+        #         message="Bạn đã bình chọn cho đánh giá này."
+        #     )
+        # ]
 
 
 # Order Models Area
@@ -125,12 +125,12 @@ class ShippingAddressSerializer(serializers.ModelSerializer):
 
 # QUAN LY SAN PHAM TRONG DON HANG
 class OrderItemSerializer(serializers.ModelSerializer):
-    product = ProductSerializer(read_only=True)
-    product_id = serializers.PrimaryKeyRelatedField(queryset=Product.objects.all(), source='product', write_only=True)
-
+    # product = ProductSerializer(read_only=True)
+    # product_id = serializers.PrimaryKeyRelatedField(queryset=Product.objects.all(), source='product', write_only=True)
+    product = serializers.PrimaryKeyRelatedField(queryset=Product.objects.all())
     class Meta:
         model = OrderItem
-        fields = ['id', 'order', 'product', 'product_id', 'quantity', 'price', 'created_date', 'updated_date', 'active']
+        fields = ['id', 'order', 'product', 'quantity', 'price', 'created_date', 'updated_date', 'active']
 
 # QUAN LY DON HANG CUA KHACH
 class CustomerOrderSerializer(serializers.ModelSerializer):
@@ -222,13 +222,13 @@ class GroupBuyMemberSerializer(serializers.ModelSerializer):
     class Meta:
         model = GroupBuyMember
         fields = ['id', 'group_buy', 'group_buy_id', 'participant', 'participant_id', 'joined_date', 'created_date', 'updated_date', 'active']
-        validators = [
-            serializers.UniqueTogetherValidator(
-                queryset=GroupBuyMember.objects.all(),
-                fields=['group_buy', 'participant'],
-                message="Người dùng đã tham gia nhóm mua này."
-            )
-        ]
+        # validators = [
+        #     serializers.UniqueTogetherValidator(
+        #         queryset=GroupBuyMember.objects.all(),
+        #         fields=['group_buy', 'participant'],
+        #         message="Người dùng đã tham gia nhóm mua này."
+        #     )
+        # ]
 
 
 # Cart Models Area
@@ -289,36 +289,6 @@ class CouponSerializer(serializers.ModelSerializer):
             raise serializers.ValidationError("valid_to phải sau valid_from.")
         return data
 
- #  ƯTF ;1??
-# def create(self, validated_data):
- #        products = validated_data.pop('products', [])
- #        group_buys = validated_data.pop('group_buys', [])
- #        customers = validated_data.pop('customers', [])
- #        coupon = Coupon.objects.create(**validated_data)
- #        coupon.products.set(products)
- #        coupon.group_buys.set(group_buys)
- #        coupon.customers.set(customers)
- #        return coupon
- #
- #    def update(self, instance, validated_data):
- #        products = validated_data.pop('products', None)
- #        group_buys = validated_data.pop('group_buys', None)
- #        customers = validated_data.pop('customers', None)
- #
- #        for attr, value in validated_data.items():
- #            setattr(instance, attr, value)
- #
- #        if products is not None:
- #            instance.products.set(products)
- #        if group_buys is not None:
- #            instance.group_buys.set(group_buys)
- #        if customers is not None:
- #            instance.customers.set(customers)
- #
- #        instance.save()
- #        return instance
-
-
 # Social Media Models Area
 # QUAN LY LUOT THICH BAI VIET (TBH, STILL DONT LIKE THE 'POST_LIKE' NAME)
 class PostLikeSerializer(serializers.ModelSerializer):
@@ -328,13 +298,13 @@ class PostLikeSerializer(serializers.ModelSerializer):
     class Meta:
         model = PostLike
         fields = ['id', 'post', 'user', 'liked_at', 'created_date', 'updated_date', 'active']
-        validators = [
-            serializers.UniqueTogetherValidator(
-                queryset=PostLike.objects.all(),
-                fields=['post', 'user'],
-                message="Bạn đã thích bài viết này."
-            )
-        ]
+        # validators = [
+        #     serializers.UniqueTogetherValidator(
+        #         queryset=PostLike.objects.all(),
+        #         fields=['post', 'user'],
+        #         message="Bạn đã thích bài viết này."
+        #     )
+        # ]
 # QUAN LY CAC BAI VIET CUA NGUOI DUNG
 class PostSerializer(serializers.ModelSerializer):
     author = CustomerSerializer(read_only=True)
@@ -354,25 +324,3 @@ class CommentSerializer(serializers.ModelSerializer):
         model = Comment
         fields = ['id', 'post', 'post_id', 'author', 'content', 'created_date', 'updated_date', 'active']
 
-
-# b. Phương Thức pop Là Gì?
-# Trong Python, pop là một phương thức của các đối tượng từ điển (dict) dùng để:
-#
-# Loại bỏ một cặp khóa-giá trị khỏi từ điển.
-# Trả về giá trị của khóa vừa bị loại bỏ.
-# Cú pháp chung của pop:
-#
-
-# value = dictionary.pop('key', default_value)
-# 'key': Khóa mà bạn muốn loại bỏ khỏi từ điển.
-# default_value (tuỳ chọn): Giá trị mặc định trả về nếu khóa không tồn tại trong từ điển.
-
-# Tại Sao Sử Dụng validated_data.pop Trong Serializers?
-# Trong các phương thức như create hoặc update của serializers, bạn thường cần xử lý các trường dữ liệu một cách đặc biệt trước khi tạo hoặc cập nhật các đối tượng model. Một số lý do bao gồm:
-#
-# Xử lý các trường dữ liệu không trực tiếp liên kết với model: Ví dụ, xác nhận mật khẩu (password2) trong quá trình đăng ký người dùng.
-# Tách biệt dữ liệu để tạo các đối tượng liên quan: Ví dụ, tạo một đối tượng Customer sau khi tạo đối tượng User.
-# Sử dụng pop giúp bạn:
-#
-# Loại bỏ các trường dữ liệu không cần thiết khỏi validated_data để tránh lỗi khi tạo đối tượng model.
-# Trích xuất các giá trị từ validated_data để xử lý chúng theo cách riêng biệt.

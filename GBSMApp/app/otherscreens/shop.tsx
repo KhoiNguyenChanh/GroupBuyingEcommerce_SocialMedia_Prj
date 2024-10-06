@@ -6,11 +6,11 @@ import {
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
-const Order = () => {
+const Shop = () => {
    return (
     <SafeAreaView>
         <Text>
-            Order
+           Shop
         </Text>
     </SafeAreaView>
    )
@@ -22,4 +22,4 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
 });
-export default Order;
+export default Shop;

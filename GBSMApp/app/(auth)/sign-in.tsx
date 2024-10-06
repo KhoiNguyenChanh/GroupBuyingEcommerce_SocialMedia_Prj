@@ -57,6 +57,7 @@ import {
   ScrollView,
   TextInput,
 } from "react-native";
+import Ionicons from "react-native-vector-icons/Ionicons";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useRouter } from "expo-router";
 import { useState } from "react";
@@ -68,7 +69,7 @@ const SignInScreen = () => {
   const [confirmPassword, setConfirmPassword] = useState("");
 
   const handleLogin = () => {
-    route.push("/(root)/(drawers)/(tabs)/main")
+    route.push("/(root)/(drawers)/(tabs)/main");
     // Xử lý đăng ký ở đây
     console.log("Email:", email);
     console.log("Password:", password);
@@ -123,23 +124,34 @@ const SignInScreen = () => {
         </View>
         <View style={{ justifyContent: "center", alignItems: "center" }}>
           {/* lam sao de co dong gach ngang qua chu hoac? */}
-          <Text>Hoặc</Text>
-          <TouchableOpacity
-            onPress={() => handleNavigateSignup()}
-            style={{ backgroundColor: "#fff", borderWidth: 1 }}
-          >
-            <Text
-              style={{
-                color: "#ff9b07",
-                lineHeight: 20,
-                fontSize: 14,
-                paddingTop: 10,
-              }}
+          <Text style={{marginBottom:10,}}>Hoặc</Text>
+
+          <View style={{ flexDirection: "row" }}>
+            <TouchableOpacity
+              onPress={() => handleNavigateSignup()}
+              style={{ 
+                backgroundColor: "#fff7e6",
+                borderRadius: 10,
+                flexDirection: 'row',
+                alignItems: 'center', // Căn giữa icon và text
+                padding: 10,
+               }}
             >
-              Đăng nhập bằng Google
-            </Text>
-          </TouchableOpacity>
+              <Ionicons name="logo-google" size={20} color="#ff9b07" />
+              <Text
+                style={{
+                  color: "#ff9b07",
+                  lineHeight: 20,
+                  fontSize: 14,
+                  marginLeft:20,
+                }}
+              >
+                Đăng nhập bằng Google
+              </Text>
+            </TouchableOpacity>
+          </View>
         </View>
+
         <View
           style={{
             flexDirection: "row",
@@ -165,9 +177,14 @@ const SignInScreen = () => {
             </Text>
           </TouchableOpacity>
         </View>
-        <TouchableOpacity style={styles.button} onPress={() => route.back()}>
-          <Text style={styles.buttonText}>Quay lại</Text>
-        </TouchableOpacity>
+        <View style={{ justifyContent: "center", alignItems: "center" }}>
+          <TouchableOpacity
+            style={[styles.button]}
+            onPress={() => route.back()}
+          >
+            <Text style={styles.buttonText}>Quay lại</Text>
+          </TouchableOpacity>
+        </View>
       </View>
     </ScrollView>
   );
@@ -206,7 +223,7 @@ const styles = StyleSheet.create({
     position: "absolute",
   },
   button: {
-    width: "50%",
+    width: "70%",
     backgroundColor: "#ffa500",
     paddingVertical: 12,
     paddingHorizontal: 40,

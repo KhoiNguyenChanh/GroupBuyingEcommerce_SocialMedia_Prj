@@ -29,7 +29,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     '192.168.1.8',
+    '192.168.1.2',
     '127.0.0.1',
+    'localhost',
     # "http://localhost:3000",
     # "http://192.168.1.8:3000",
     # "http://192.168.1.8:8000",
@@ -195,8 +197,11 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # app name :GroupBuyingEcommerceApp
-CLIENT_ID = 'JP8d7Gi7bXqTskuexdkpLTxWLRbkR6tLFy89obmC'
-CLIENT_SECRET = 'cx8h6ItGxDOkYzrnVjvO2IyOw9VX0CXhxkx2RVCDy6YhX0wOeO6azr5EKhGeEaO9iwNU6FMEqdjcOUM9FZNSBbUeHQQEkJw8AyHOja0UAvkUFmp3re2mXiOzXy3qUgUn'
+CLIENT_ID = 'dN3jdsVEpkjTbjflWeSOG1TYH3lmOSuMVtO8bL4p'
+CLIENT_SECRET = 'spg0l6MsBdHWGFYgKBwcVCi3NaAJE1h9XEgeMdZp3FR9nZmMzLl2clFGKB6O4OKF2tJUfaWLoTrKJeRWsF7g8LP4RL2ePgQG0SZFqZJkA24NdPbCEPR15dJIlzeziwjf'
+
+# CLIENT_ID = 'JP8d7Gi7bXqTskuexdkpLTxWLRbkR6tLFy89obmC'
+# CLIENT_SECRET = 'cx8h6ItGxDOkYzrnVjvO2IyOw9VX0CXhxkx2RVCDy6YhX0wOeO6azr5EKhGeEaO9iwNU6FMEqdjcOUM9FZNSBbUeHQQEkJw8AyHOja0UAvkUFmp3re2mXiOzXy3qUgUn'
 
 # GRANT_TYPE UN_FING_SUPPORTED!!!!
 # OAUTH2_PROVIDER = {
